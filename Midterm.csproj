@@ -5,4 +5,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Books.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Books.txt" />
+  </ItemGroup>
+
 </Project>
