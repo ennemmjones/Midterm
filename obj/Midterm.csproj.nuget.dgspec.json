@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Maronda/Projects/Midterm/Midterm.csproj": {}
+    "C:\\Users\\n\\source\\repos\\Midterm\\Midterm.csproj": {}
   },
   "projects": {
-    "/Users/Maronda/Projects/Midterm/Midterm.csproj": {
+    "C:\\Users\\n\\source\\repos\\Midterm\\Midterm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Maronda/Projects/Midterm/Midterm.csproj",
+        "projectUniqueName": "C:\\Users\\n\\source\\repos\\Midterm\\Midterm.csproj",
         "projectName": "Midterm",
-        "projectPath": "/Users/Maronda/Projects/Midterm/Midterm.csproj",
-        "packagesPath": "/Users/Maronda/.nuget/packages/",
-        "outputPath": "/Users/Maronda/Projects/Midterm/obj/",
+        "projectPath": "C:\\Users\\n\\source\\repos\\Midterm\\Midterm.csproj",
+        "packagesPath": "C:\\Users\\n\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\n\\source\\repos\\Midterm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/Maronda/.config/NuGet/NuGet.Config"
+          "C:\\Users\\n\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
