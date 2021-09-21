@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 namespace Midterm
 {
 
@@ -19,9 +20,9 @@ namespace Midterm
         public DateTime DueDate { get; set; }
 
 
-       
 
-        public Book (string title, string author, string status, DateTime duedate)
+
+        public Book(string title, string author, string status, DateTime duedate)
         {
 
             Title = title;
@@ -31,7 +32,7 @@ namespace Midterm
 
 
         }
-
+    }
 
 
         public class Library : Media
@@ -46,6 +47,44 @@ namespace Midterm
 
              }
 
+            public static List<Book> MakeBooks()
+            {
+                const string f = "Books.txt";
+                List<string> lines = new List<string>();
+                using (StreamReader r = new StreamReader(f))
+                {
+                    string line;
+                    while ((line = r.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
+                }
+                Book book;
+                List<Book> library = new List<Book>();
+                foreach (string s in lines)
+                {
+                    var split = s.Split('/');
+                    book = new Book(split[0], split[1], split[2], SetDueDate());
+                    library.Add(book);
+
+                }
+                return library;
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
 
 
 
@@ -59,18 +98,4 @@ namespace Midterm
 
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
 }
