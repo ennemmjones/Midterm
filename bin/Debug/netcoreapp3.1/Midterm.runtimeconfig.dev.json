@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/Users/Maronda/.dotnet/store/|arch|/|tfm|",
-      "/Users/Maronda/.nuget/packages"
-    ]
-  }
-}
