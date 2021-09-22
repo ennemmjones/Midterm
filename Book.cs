@@ -64,7 +64,7 @@ namespace Midterm
                 foreach (string s in lines)
                 {
                     var split = s.Split('/');
-                    book = new Book(split[0], split[1], split[2], SetDueDate());
+                    book = new Book(split[0], split[1], split[2], Convert.ToDateTime(split[4]));
                     library.Add(book);
 
                 }
