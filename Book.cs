@@ -51,7 +51,7 @@ namespace Midterm
             public static List<Book> MakeBooks()
             {
             
-            const string f = "Books.txt";
+            const string f = @"../../../Books.txt";
            
             List<string> lines = new List<string>();
                 using (StreamReader r = new StreamReader(f))
@@ -66,8 +66,8 @@ namespace Midterm
                 List<Book> library = new List<Book>();
                 foreach (string s in lines)
                 {
-                var split = s.Split('/');
-                    book = new Book(split[0], split[1], split[2], default(DateTime)); //Convert.ToDateTime(split[3])
+                var split = s.Split('|');
+                    book = new Book(split[0], split[1], split[2], Convert.ToDateTime(split[3])); 
                     library.Add(book);
 
                 }
@@ -143,12 +143,12 @@ namespace Midterm
 
         public static void WriteToFile(List<Book> library)
         {            
-            const string f = "Books.txt";            
+            const string f = @"../../../Books.txt";
             using (StreamWriter w = new StreamWriter(f))
             {
                 foreach (Book b in library)
                 {
-                    w.WriteLine($"{b.Title}/{b.Author}/{b.Status}/{(b.DueDate).ToString()}");
+                    w.WriteLine($"{b.Title}|{b.Author}|{b.Status}|{(b.DueDate).ToString()}");
                 }
             }
 

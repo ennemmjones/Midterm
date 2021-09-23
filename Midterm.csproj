@@ -6,13 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Books.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Books.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Update="Books.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
