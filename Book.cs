@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+
 namespace Midterm
 {
 
@@ -64,38 +65,103 @@ namespace Midterm
                 foreach (string s in lines)
                 {
                     var split = s.Split('/');
-                    book = new Book(split[0], split[1], split[2], Convert.ToDateTime(split[4]));
+                    book = new Book(split[0], split[1], split[2], SetDueDate());
                     library.Add(book);
 
                 }
                 return library;
 
+
+
+            }
+
+
+         public static List<Book> SearchbyAuthor(List<Book> library)
+        {
+            string userInput;
+            Console.WriteLine("Which author would you like to search for?:" );
+
+            userInput = Console.ReadLine().ToLower();
+
+            List<Book> matchedAuthor = new List<Book>();
+            
+
+            for (int i = 0; i < library.Count; i++)
+            {
+                if (library[i].Author.Contains (userInput))
+                {
+                    matchedAuthor.Add(library[i]);
+                }
+
+                   
+            }
+            if (matchedAuthor.Count < 1)
+            {
+
+                Console.WriteLine("That search returned no results");
+                
             }
 
 
 
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
+            return matchedAuthor;
         }
+
+
+        public static List<Book> SearchbyTitle(List<Book> library)
+        {
+            string userInput;
+            Console.WriteLine("Which title would you like to search for?:");
+
+            userInput = Console.ReadLine().ToLower();
+
+            List<Book> matchedTitle = new List<Book>();
+
+
+            for (int i = 0; i < library.Count; i++)
+            {
+                if (library[i].Author.Contains(userInput))
+                {
+                    matchedTitle.Add(library[i]);
+                }
+
+
+            }
+            if (matchedTitle.Count < 1)
+            {
+
+                Console.WriteLine("That search returned no results");
+
+            }
+
+
+
+            return matchedTitle;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 }
