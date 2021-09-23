@@ -15,6 +15,7 @@ namespace Midterm
                 Console.WriteLine($"{ b.Author}, { b.Title}, {b.Status}, {b.DueDate} "); 
             }
 
+            Library.WriteToFile(ourLibrary);
         }
         
     }

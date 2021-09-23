@@ -23,7 +23,7 @@ namespace Midterm
 
 
 
-        public Book(string title, string author, string status, DateTime duedate)
+        public Book(string title, string author, string status, DateTime duedate = default(DateTime))
         {
 
             Title = title;
@@ -50,8 +50,10 @@ namespace Midterm
 
             public static List<Book> MakeBooks()
             {
-                const string f = "Books.txt";
-                List<string> lines = new List<string>();
+            
+            const string f = "Books.txt";
+           
+            List<string> lines = new List<string>();
                 using (StreamReader r = new StreamReader(f))
                 {
                     string line;
@@ -64,8 +66,8 @@ namespace Midterm
                 List<Book> library = new List<Book>();
                 foreach (string s in lines)
                 {
-                    var split = s.Split('/');
-                    book = new Book(split[0], split[1], split[2], SetDueDate());
+                var split = s.Split('/');
+                    book = new Book(split[0], split[1], split[2], default(DateTime)); //Convert.ToDateTime(split[3])
                     library.Add(book);
 
                 }
@@ -138,6 +140,22 @@ namespace Midterm
 
             return matchedTitle;
         }
+
+        public static void WriteToFile(List<Book> library)
+        {            
+            const string f = "Books.txt";            
+            using (StreamWriter w = new StreamWriter(f))
+            {
+                foreach (Book b in library)
+                {
+                    w.WriteLine($"{b.Title}/{b.Author}/{b.Status}/{(b.DueDate).ToString()}");
+                }
+            }
+
+
+        }
+
+
 
 
 
