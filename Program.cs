@@ -8,8 +8,6 @@ namespace Midterm
     {
         static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
                 bool goOn = true;
                 while (goOn == true)
                 {
@@ -22,29 +20,6 @@ namespace Midterm
 
                     goOn = GetContinue(); // Calls Continue Method
                 }
-
-
-
-                public static bool GetContinue()
-                    {
-                        Console.WriteLine("Would you like to continue? y/n");
-                        string answer = Console.ReadLine();
-
-                        if (answer == "y")
-                        {
-                            return true;
-                        }
-                        else if (answer == "n")
-                        {
-                            return false;
-                        }
-                        else
-                        {
-                            Console.WriteLine("I didn't understand that, please try again");
-
-                            return GetContinue();
-                        }
-                    }
 
 
             List<Book> ourLibrary = Library.MakeBooks();
@@ -79,6 +54,27 @@ namespace Midterm
 
             Library.WriteToFile(ourLibrary);
         }
-        
+
+        public static bool GetContinue()
+        {
+            Console.WriteLine("Would you like to continue? y/n");
+            string answer = Console.ReadLine();
+
+            if (answer == "y")
+            {
+                return true;
+            }
+            else if (answer == "n")
+            {
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("I didn't understand that, please try again");
+
+                return GetContinue();
+            }
+        }
+
     }
 }
