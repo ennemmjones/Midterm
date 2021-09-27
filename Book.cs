@@ -23,7 +23,7 @@ namespace Midterm
 
 
 
-        public Book(string title, string author, string status, DateTime duedate)
+        public Book(string title, string author, string status, DateTime duedate = default(DateTime))
         {
 
             Title = title;
@@ -50,8 +50,10 @@ namespace Midterm
 
             public static List<Book> MakeBooks()
             {
-                const string f = "Books.txt";
-                List<string> lines = new List<string>();
+            
+            const string f = @"../../../Books.txt";
+           
+            List<string> lines = new List<string>();
                 using (StreamReader r = new StreamReader(f))
                 {
                     string line;
@@ -64,14 +66,12 @@ namespace Midterm
                 List<Book> library = new List<Book>();
                 foreach (string s in lines)
                 {
-                    var split = s.Split('/');
-                    book = new Book(split[0], split[1], split[2], SetDueDate());
+                var split = s.Split('|');
+                    book = new Book(split[0], split[1], split[2], Convert.ToDateTime(split[3])); 
                     library.Add(book);
 
                 }
                 return library;
-
-
 
             }
 
@@ -88,12 +88,11 @@ namespace Midterm
 
             for (int i = 0; i < library.Count; i++)
             {
-                if (library[i].Author.Contains (userInput))
+                if (library[i].Author.ToLower().Contains (userInput))
                 {
                     matchedAuthor.Add(library[i]);
                 }
-
-                   
+                                   
             }
             if (matchedAuthor.Count < 1)
             {
@@ -101,8 +100,6 @@ namespace Midterm
                 Console.WriteLine("That search returned no results");
                 
             }
-
-
 
             return matchedAuthor;
         }
@@ -120,11 +117,10 @@ namespace Midterm
 
             for (int i = 0; i < library.Count; i++)
             {
-                if (library[i].Author.Contains(userInput))
+                if (library[i].Title.ToLower().Contains(userInput))
                 {
                     matchedTitle.Add(library[i]);
                 }
-
 
             }
             if (matchedTitle.Count < 1)
@@ -134,10 +130,96 @@ namespace Midterm
 
             }
 
-
-
             return matchedTitle;
         }
+
+        public static void WriteToFile(List<Book> library)
+        {            
+            const string f = @"../../../Books.txt";
+            using (StreamWriter w = new StreamWriter(f))
+            {
+                foreach (Book b in library)
+                {
+                    w.WriteLine($"{b.Title}|{b.Author}|{b.Status}|{b.DueDate}");
+                }
+            }
+
+
+        }
+
+        public static void CheckOut(List<Book> library)
+        {
+            // Display book title with Number
+            for(int i = 0;  i < library.Count; i++)
+            {
+                Console.WriteLine($"[{i}]\t- {library[i].Title}");
+            }    
+            
+            // Get user input
+            Console.Write("Select the number of the book you would like to check out: ");
+            string userInput = Console.ReadLine();
+
+            // Validate input
+            var testInput = Int32.TryParse(userInput, out int index);
+            if (!testInput || index > library.Count)
+            {
+                Console.WriteLine("Not a valid selection");
+                return;
+            }
+
+            Book book = library[index];            
+            
+            // Check book's current status
+            if (book.Status == "Checked Out")
+            {
+                Console.WriteLine($"That book is already checked out. It should be back by {book.DueDate}.");
+            }
+            // Check out book (change status, set due date)
+            else
+            {
+                book.Status = "Checked Out";
+                book.DueDate = SetDueDate();
+                Console.WriteLine($"{book.Title} is due back on {book.DueDate}.");
+            }
+            
+        }
+
+        public static void ReturnBook(List<Book> library)
+        {
+            // Display book title with Number
+            for (int i = 0; i < library.Count; i++)
+            {
+                Console.WriteLine($"[{i}]\t-  {library[i].Title}");
+            }
+
+            // Get user input
+            Console.Write("Select the number of the book you would like to return: ");
+            string userInput = Console.ReadLine();
+
+            // Validate input
+            var testInput = Int32.TryParse(userInput, out int index);
+            if (!testInput || index > library.Count)
+            {
+                Console.WriteLine("Not a valid selection");
+                return;
+            }
+
+            Book book = library[index];
+
+            // Return book (change status, reset date)
+            if (book.Status == "Checked Out")
+            {
+                book.Status = "On Shelf";
+                book.DueDate = DateTime.MinValue;
+                Console.WriteLine($"{book.Title} has been returned");
+            }
+            else
+            {
+                Console.WriteLine($"That book is already on the shelf.");
+            }
+
+        }
+
 
 
 
