@@ -76,7 +76,7 @@ namespace Midterm
             }
 
 
-         public static List<Book> SearchbyAuthor(List<Book> library)
+         public static void SearchbyAuthor(List<Book> library)
         {
             string userInput;
             Console.WriteLine("Which author would you like to search for?:" );
@@ -101,11 +101,14 @@ namespace Midterm
                 
             }
 
-            return matchedAuthor;
+            foreach (Book b in matchedAuthor)
+            {
+                Console.WriteLine($"{b.Title,-40} {b.Author,-20} ");
+            }
         }
 
 
-        public static List<Book> SearchbyTitle(List<Book> library)
+        public static void SearchbyTitle(List<Book> library)
         {
             string userInput;
             Console.WriteLine("Which title would you like to search for?:");
@@ -130,7 +133,10 @@ namespace Midterm
 
             }
 
-            return matchedTitle;
+            foreach (Book b in matchedTitle)
+            {
+                Console.WriteLine($"{b.Title, -40} {b.Author, -20}");
+            }
         }
 
         public static void WriteToFile(List<Book> library)
@@ -217,6 +223,26 @@ namespace Midterm
             {
                 Console.WriteLine($"That book is already on the shelf.");
             }
+
+        }
+
+        public static void DisplayInfo(List<Book> library)
+        {
+            Console.WriteLine($"{"TITLE",-40} {"AUTHOR",-25} {"STATUS",-12} {"DUE DATE"}");
+            foreach (Book b in library)
+            {
+                if (b.Status == "Checked Out")
+                {
+                    Console.WriteLine($"{b.Title,-40} {b.Author,-25} {b.Status,-12} {b.DueDate} ");
+                }
+                else
+                {
+                    Console.WriteLine($"{b.Title,-40} {b.Author,-25} {b.Status,-12} ");
+
+                }
+
+            }
+
 
         }
 
