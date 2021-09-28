@@ -8,8 +8,7 @@ namespace Midterm
     {
         static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
+           
                 bool goOn = true;
                 while (goOn == true)
                 {
