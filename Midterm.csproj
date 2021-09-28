@@ -6,11 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-
     <None Update="Books.txt">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-
+    </None> 
   </ItemGroup>
 
 </Project>
