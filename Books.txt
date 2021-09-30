@@ -1,4 +1,4 @@
-Lord of the Rings|J.R.R Tolkien|Checked Out|10/7/2021 9:08:02 PM
+Lord of the Rings|J.R.R Tolkien|On Shelf|1/1/0001 12:00:00 AM
 Harry Potter and the Sorcerer's Stone|J.K. Rowling|Checked Out|10/7/2021 9:46:09 PM
 And Then There Were None|Agatha Christie|Checked Out|10/7/2021 9:52:17 PM
 Catcher in the Rye|J.D. Salinger|On Shelf|1/1/0001 12:00:00 AM

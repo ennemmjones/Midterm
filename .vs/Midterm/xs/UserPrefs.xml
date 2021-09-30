@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{19109674-FC92-436E-980D-3327663F03F3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Books.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Book.cs">
     <Files>
-      <File FileName="Program.cs" Line="51" Column="26" />
-      <File FileName="Books.txt" Line="13" Column="1" />
+      <File FileName="Program.cs" Line="47" Column="26" />
+      <File FileName="Books.txt" Line="1" Column="1" />
       <File FileName=".gitignore" />
-      <File FileName="Midterm.csproj" />
-      <File FileName="Book.cs" />
+      <File FileName="Midterm.csproj" Line="1" Column="1" />
+      <File FileName="Book.cs" Line="37" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Midterm" expanded="True">
             <Node name="Midterm" expanded="True">
-              <Node name="Books.txt" selected="True" />
+              <Node name="Book.cs" selected="True" />
             </Node>
           </Node>
         </State>
