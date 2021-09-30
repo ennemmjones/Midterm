@@ -3,7 +3,7 @@ Harry Potter and the Sorcerer's Stone|J.K. Rowling|Checked Out|10/7/2021 9:46:09
 And Then There Were None|Agatha Christie|Checked Out|10/7/2021 9:52:17 PM
 Catcher in the Rye|J.D. Salinger|On Shelf|1/1/0001 12:00:00 AM
 Flowers in the Attic|V.C. Andrews|On Shelf|1/1/0001 12:00:00 AM
-James and the Giant Peach|Roald Dahl|On Shelf|1/1/0001 12:00:00 AM
+James and the Giant Peach|Ronald Dahl|On Shelf|1/1/0001 12:00:00 AM
 Breakfast of Champions|Kurt Vonnegut|On Shelf|1/1/0001 12:00:00 AM
 I, Robot|Isaac Asimov|On Shelf|1/1/0001 12:00:00 AM
 Neuromancer|William Gibson|On Shelf|1/1/0001 12:00:00 AM
