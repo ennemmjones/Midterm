@@ -17,7 +17,7 @@ namespace Midterm
             {
 
 
-                Console.WriteLine($"Select an option:\n (1) Display Library\n (2) Search by Author\n (3) Search by title\n (4) Check Out a book\n (5) Return a book\n (6) Add book to Library");
+                Console.WriteLine($"Select an option:\n (1) Display Library\n (2) Search by Author\n (3) Search by title\n (4) Check Out a book\n (5) Return a book\n (6) Add book to Library\n (7) Exit the Library");
                 var userInput = Console.ReadLine();
 
                 switch (userInput)
@@ -53,6 +53,11 @@ namespace Midterm
                             ourLibrary.Add(book);
                             break;
                         }
+                    case "7":
+                        {
+                            goOn = GetContinue();
+                            break;
+                        }
 
 
                     default:
@@ -66,7 +71,7 @@ namespace Midterm
 
 
                
-                goOn = GetContinue(); // Calls Continue Method
+                
             }
             Library.WriteToFile(ourLibrary);
 
@@ -74,14 +79,14 @@ namespace Midterm
         }
         public static bool GetContinue()
         {
-            Console.WriteLine("Would you like to return back to our library menu? yes or no");
+            Console.WriteLine("Do you want to exit the Library? yes or no");
             string answer = Console.ReadLine().ToLower();
 
-            if (answer == "yes")
+            if (answer == "no")
             {
                 return true;
             }
-            else if (answer == "no")
+            else if (answer == "yes")
             {
                 return false;
             }
