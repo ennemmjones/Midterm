@@ -276,22 +276,6 @@ namespace Midterm
 
 
 
-
-
-
-
-            //Writes to book file
-            //const string k = @"../../../Books.txt";
-            //using (StreamWriter w = new StreamWriter(k))
-            // {
-            //     foreach (Book b in library)
-            //  {
-            //     w.WriteLine($"{b.Title}|{b.Author}|{b.Status}|{b.DueDate}");
-            //  }
-            // }
-
-
-
         }
     }
 }
