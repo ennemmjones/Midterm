@@ -22,8 +22,8 @@ namespace Midterm
         public DateTime DueDate { get; set; }
 
 
-        public string titleInput { get; set; }
-        public string authorName { get; set; }
+        //public string titleInput { get; set; }
+        //public string authorName { get; set; }
 
 
 
@@ -39,11 +39,11 @@ namespace Midterm
 
         }
         //Constructor added so AddBook Method works
-        public Book(string titleInput, string authorName)
-        {
-            this.titleInput = titleInput;
-            this.authorName = authorName;
-        }
+        //public Book(string titleInput, string authorName)
+        //{
+        //    this.titleInput = titleInput;
+        //    this.authorName = authorName;
+        //}
     }
 
 
@@ -279,7 +279,7 @@ namespace Midterm
             {
                 
 
-                addedBook.Add(new Book(titleInput, authorName));
+                addedBook.Add(new Book(titleInput, authorName, "On Shelf", default(DateTime)));
             }
 
             Console.WriteLine($"The book {titleInput} by {authorName} has been added to the library");
