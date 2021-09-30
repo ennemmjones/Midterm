@@ -17,7 +17,7 @@ namespace Midterm
             {
 
 
-                Console.WriteLine($"Select an option: (1) Display Library (2) Search by Author (3) Search by title (4) Check Out a book (5) Return a book (6) Add book to Library");
+                Console.WriteLine($"Select an option:\n (1) Display Library\n (2) Search by Author\n (3) Search by title\n (4) Check Out a book\n (5) Return a book\n (6) Add book to Library");
                 var userInput = Console.ReadLine();
 
                 switch (userInput)
@@ -49,7 +49,8 @@ namespace Midterm
                         }
                     case "6":
                         {
-                            Library.AddBook(ourLibrary);
+                            var book = Library.AddBook(ourLibrary);
+                            ourLibrary.Add(book);
                             break;
                         }
 

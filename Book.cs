@@ -258,7 +258,7 @@ namespace Midterm
         }
 
 
-        public static void AddBook(List<Book> library)
+        public static Book AddBook(List<Book> library)
         {
             string titleInput;
             string authorName;
@@ -269,20 +269,10 @@ namespace Midterm
 
             Console.WriteLine("Now enter the name of the author for the book you would like to add to our Library");
 
-            authorName = Console.ReadLine();
-
-
-
-            List<Book> addedBook = new List<Book>();
-
-            for (int i = 0; i < library.Count; i++)
-            {
-                
-
-                addedBook.Add(new Book(titleInput, authorName, "On Shelf", default(DateTime)));
-            }
+            authorName = Console.ReadLine(); 
 
             Console.WriteLine($"The book {titleInput} by {authorName} has been added to the library");
+            return new Book(titleInput, authorName, "On Shelf", default(DateTime));
 
 
 
@@ -292,11 +282,11 @@ namespace Midterm
 
             //Writes to book file
             //const string k = @"../../../Books.txt";
-             //using (StreamWriter w = new StreamWriter(k))
-           // {
-           //     foreach (Book b in library)
+            //using (StreamWriter w = new StreamWriter(k))
+            // {
+            //     foreach (Book b in library)
             //  {
-             //     w.WriteLine($"{b.Title}|{b.Author}|{b.Status}|{b.DueDate}");
+            //     w.WriteLine($"{b.Title}|{b.Author}|{b.Status}|{b.DueDate}");
             //  }
             // }
 
