@@ -10,12 +10,13 @@ namespace Midterm
         {
 
 
+            Console.WriteLine("Welcome to Grand Circus Public Library");
 
             List<Book> ourLibrary = Library.MakeBooks();
             bool goOn = true;
             while (goOn == true)
             {
-
+                
 
                 Console.WriteLine($"Select an option:\n (1) Display Library\n (2) Search by Author\n (3) Search by title\n (4) Check Out a book\n (5) Return a book\n (6) Add book to Library\n (7) Exit the Library");
                 var userInput = Console.ReadLine();
@@ -71,7 +72,6 @@ namespace Midterm
 
 
                
-                
             }
             Library.WriteToFile(ourLibrary);
 
@@ -79,7 +79,7 @@ namespace Midterm
         }
         public static bool GetContinue()
         {
-            Console.WriteLine("Do you want to exit the Library? yes or no");
+            Console.WriteLine("Are you sure you want to exit the Library? yes or no");
             string answer = Console.ReadLine().ToLower();
 
             if (answer == "no")
@@ -88,6 +88,7 @@ namespace Midterm
             }
             else if (answer == "yes")
             {
+                Console.WriteLine("Thanks for visting, Goodbye");
                 return false;
             }
             else

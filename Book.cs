@@ -22,11 +22,6 @@ namespace Midterm
         public DateTime DueDate { get; set; }
 
 
-        //public string titleInput { get; set; }
-        //public string authorName { get; set; }
-
-
-
 
         public Book(string title, string author, string status, DateTime duedate = default(DateTime))
         {
@@ -38,12 +33,7 @@ namespace Midterm
 
 
         }
-        //Constructor added so AddBook Method works
-        //public Book(string titleInput, string authorName)
-        //{
-        //    this.titleInput = titleInput;
-        //    this.authorName = authorName;
-        //}
+        
     }
 
 

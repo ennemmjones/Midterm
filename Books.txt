@@ -1,5 +1,6 @@
 Lord of the Rings|J.R.R Tolkien|On Shelf|1/1/0001 12:00:00 AM
 Harry Potter and the Sorcerer's Stone|J.K. Rowling|On Shelf|1/1/0001 12:00:00 AM
+Harry Potter and the Sorcerer's Stone|J.K. Rowling|On Shelf|1/1/0001 12:00:00 AM
 And Then There Were None|Agatha Christie|Checked Out|10/7/2021 9:52:17 PM
 Catcher in the Rye|J.D. Salinger|On Shelf|1/1/0001 12:00:00 AM
 Flowers in the Attic|V.C. Andrews|On Shelf|1/1/0001 12:00:00 AM
