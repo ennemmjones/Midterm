@@ -8,12 +8,16 @@ namespace Midterm
     {
         static void Main(string[] args)
         {
+
+
+
             List<Book> ourLibrary = Library.MakeBooks();
             bool goOn = true;
             while (goOn == true)
             {
 
-                Console.WriteLine($"Select an option: (1) Display Library (2) Search by Author (3) Search by title (4) Check Out a book (5) Return a book");
+
+                Console.WriteLine($"Select an option: (1) Display Library (2) Search by Author (3) Search by title (4) Check Out a book (5) Return a book (6) Add book to Library");
                 var userInput = Console.ReadLine();
 
                 switch (userInput)
@@ -41,6 +45,11 @@ namespace Midterm
                     case "5":
                         {
                             Library.ReturnBook(ourLibrary);
+                            break;
+                        }
+                    case "6":
+                        {
+                            Library.AddBook(ourLibrary);
                             break;
                         }
 
@@ -95,14 +104,14 @@ namespace Midterm
         }
         public static bool GetContinue()
         {
-            Console.WriteLine("Would you like to continue? y/n");
-            string answer = Console.ReadLine();
+            Console.WriteLine("Would you like to return back to our library menu? yes or no");
+            string answer = Console.ReadLine().ToLower();
 
-            if (answer == "y")
+            if (answer == "yes")
             {
                 return true;
             }
-            else if (answer == "n")
+            else if (answer == "no")
             {
                 return false;
             }
