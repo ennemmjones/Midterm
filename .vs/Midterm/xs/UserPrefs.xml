@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{19109674-FC92-436E-980D-3327663F03F3}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Book.cs">
     <Files>
-      <File FileName="Program.cs" Line="47" Column="26" />
-      <File FileName="Books.txt" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="82" Column="49" />
+      <File FileName="Books.txt" Line="3" Column="81" />
       <File FileName=".gitignore" />
-      <File FileName="Midterm.csproj" Line="1" Column="1" />
-      <File FileName="Book.cs" Line="37" Column="6" />
+      <File FileName="Midterm.csproj" />
+      <File FileName="Book.cs" Line="75" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

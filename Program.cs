@@ -72,7 +72,6 @@ namespace Midterm
 
 
                
-                
             }
             Library.WriteToFile(ourLibrary);
 
@@ -80,17 +79,7 @@ namespace Midterm
         }
         public static bool GetContinue()
         {
-<<<<<<< HEAD
-            Console.WriteLine("Would you like to return back to our library menu or exit our library? ");
-            string answer = Console.ReadLine().ToLower();
-
-            if (answer == "return")
-            {
-                return true;
-            }
-            else if (answer == "exit")
-=======
-            Console.WriteLine("Do you want to exit the Library? yes or no");
+            Console.WriteLine("Are you sure you want to exit the Library? yes or no");
             string answer = Console.ReadLine().ToLower();
 
             if (answer == "no")
@@ -98,7 +87,6 @@ namespace Midterm
                 return true;
             }
             else if (answer == "yes")
->>>>>>> 0fbe604724608a7bcbab76f2037f39f9db10d57f
             {
                 Console.WriteLine("Thanks for visting, Goodbye");
                 return false;
